@@ -66,12 +66,10 @@
 			                <goal>prepare-agent</goal>
 			            </goals>
 			            <configuration>
-			                <!-- Sets the path to the file which contains the execution data. -->
-			                <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-			                <!--
-			                    Sets the name of the property containing the settings
-			                    for JaCoCo runtime agent.
-			                -->
+			              <excludes>
+                        			<exclude>**/Q*.java</exclude>
+                        			<exclude>**/static/**</exclude>
+                    			</excludes>
 			                <propertyName>surefireArgLine</propertyName>
 			            </configuration>
 			        </execution>
