@@ -38,6 +38,11 @@ spec:
           httpGet:
             path: /health
             port: 8080
+          initialDelaySeconds: 240
+          periodSeconds: 5
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 10
         ports:
         - name: backend
           containerPort: 8080
