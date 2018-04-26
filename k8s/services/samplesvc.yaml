@@ -15,7 +15,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: msvcapp
+  name: camelpubsubconsumer
 spec:
   ports:
   - name: http
@@ -24,4 +24,4 @@ spec:
     protocol: TCP
   selector:
     role: default
-    app: msvcapp
+    app: camelpubsubconsumer

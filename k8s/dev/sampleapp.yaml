@@ -15,34 +15,25 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: microservicesample-dev
+  name: camelpubsubconsumer-dev
 spec:
   replicas: 1
   template:
     metadata:
-      name: msvcapp
+      name: camelpubsubconsumer
       labels:
-        app: msvcapp
+        app: camelpubsubconsumer
         role: default
         env: dev
     spec:
       containers:
-      - name: msvcapp
-        image: us.gcr.io/inbound-rune-devops-gke/microservicesample:1.0.0
+      - name: camelpubsubconsumer
+        image: us.gcr.io/inbound-rune-devops-gke/camelpubsubconsumer:1.0.0
         resources:
           limits:
             memory: "500Mi"
             cpu: "100m"
         imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8080
-          initialDelaySeconds: 240
-          periodSeconds: 5
-          timeoutSeconds: 5
-          successThreshold: 1
-          failureThreshold: 10
         ports:
         - name: backend
           containerPort: 8080

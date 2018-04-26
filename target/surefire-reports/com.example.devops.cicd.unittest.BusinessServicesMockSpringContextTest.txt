@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.devops.cicd.unittest.BusinessServicesMockSpringContextTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.271 sec - in com.example.devops.cicd.unittest.BusinessServicesMockSpringContextTest
